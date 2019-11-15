@@ -35,20 +35,6 @@ check_interval = 0
     MachineDriver = "${machine_driver}"
     MachineName = "runner-%s"
     MachineOptions = [
-      "amazonec2-instance-type=${runners_instance_type}",
-      "amazonec2-region=${aws_region}",
-      "amazonec2-zone=${runners_aws_zone}",
-      "amazonec2-vpc-id=${runners_vpc_id}",
-      "amazonec2-subnet-id=${runners_subnet_id}",
-      "amazonec2-private-address-only=${runners_use_private_address}",
-      "amazonec2-request-spot-instance=true",
-      "amazonec2-spot-price=${runners_spot_price_bid}",
-      "amazonec2-security-group=${runners_security_group_name}",
-      "amazonec2-tags=${runners_tags}",
-      "amazonec2-monitoring=${runners_monitoring}",
-      "amazonec2-iam-instance-profile=${runners_instance_profile}",
-      "amazonec2-root-size=${runners_root_size}",
-      "amazonec2-ami=${runners_ami}"
       ${docker_machine_options}
     ]
     OffPeakTimezone = "${runners_off_peak_timezone}"

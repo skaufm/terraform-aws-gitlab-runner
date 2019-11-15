@@ -5,7 +5,7 @@ resource "aws_key_pair" "key" {
 
 locals {
   // Convert list to a string separated and prepend by a comma
-  docker_machine_options_string = "${format(",%s", join(",", formatlist("%q", var.docker_machine_options)))}"
+  docker_machine_options_string = "${format("%s", join(",", formatlist("%q", var.docker_machine_options)))}"
 
   // Ensure off peak is optional
   runners_off_peak_periods_string = "${var.runners_off_peak_periods == "" ? "" : format("OffPeakPeriods = %s", var.runners_off_peak_periods)}"
