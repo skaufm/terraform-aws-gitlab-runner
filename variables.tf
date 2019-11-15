@@ -372,3 +372,9 @@ variable "overrides" {
     name_docker_machine_runners = ""
   }
 }
+
+
+variable "machine_driver" {
+  description = "machine driver for spotinst"
+  default = "amazonec2"
+}

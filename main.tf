@@ -180,6 +180,7 @@ data "template_file" "runners" {
     runners_output_limit              = "${var.runners_output_limit}"
     bucket_name                       = "${aws_s3_bucket.build_cache.bucket}"
     shared_cache                      = "${var.cache_shared}"
+    machine_driver                    = "${var.machine_driver}"
   }
 }
 
